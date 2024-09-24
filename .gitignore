@@ -1,0 +1,97 @@
+# This .gitignore file is tailored for Unity + C# development.
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Auto-generated files
+Generated/
+GeneratedCode/
+
+# Build results
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+# Build folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+
+# Unity Crash Reports
+sysinfo.txt
+
+# Ignore asset meta data for build directories
+Assets/StreamingAssets/*.meta
+
+# Uncomment if you have tasks that create the Assets/StreamingAssets/ directory.
+# StreamingAssets/
+
+# OSX files
+.DS_Store
+
+# Windows image file caches
+Thumbs.db
+Thumbs.db.meta
+
+# Thumbnail cache files
+*.stackdump
+
+# Files for iOS and Android
+*.apk
+*.aab
+*.ipa
+*.xcuserstate
+
+# Ignore the gradle build folder in Android builds
+.gradle/
+
+# Ignore the Unity Asset Store tools directory
+Assets/AssetStoreTools*
+
+# Logs, builds, and local project files created by Unity.
+Logs/
+MemoryCaptures/
+*.pidb.meta
+*.pidb
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Gradle cache (used in Android builds)
+.gradle/
+
+# NuGet Packages
+*.nupkg
+# NuGet Symbol Packages
+*.snupkg
+
+# Ignore the Unity generated meta files
+*.pidb
+*.pidb.meta

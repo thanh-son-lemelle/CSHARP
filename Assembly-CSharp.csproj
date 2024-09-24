@@ -59,12 +59,42 @@
     <UnityVersion>2022.3.47f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\tslem\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\Vanny Laure Lamorte\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Main.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\entities\environment\materials\info.txt" />
+    <None Include="Assets\entities\characters\animations\info.txt" />
+    <None Include="Assets\entities\NPC\models\info.txt" />
+    <None Include="Assets\fonts\info.txt" />
+    <None Include="Assets\entities\enemies\prefabs\info.txt" />
+    <None Include="Assets\audio\SFX\info.txt" />
+    <None Include="Assets\data\items\info.txt" />
+    <None Include="Assets\data\characters\info.txt" />
+    <None Include="Assets\entities\environment\shaders\info.txt" />
+    <None Include="Assets\scripts\utilities\info.txt" />
+    <None Include="Assets\entities\characters\models\info.txt" />
+    <None Include="Assets\entities\enemies\models\info.txt" />
+    <None Include="Assets\entities\characters\prefabs\info.txt" />
+    <None Include="Assets\entities\enemies\animations\info.txt" />
+    <None Include="Assets\entities\environment\models\info.txt" />
+    <None Include="Assets\audio\music\info.txt" />
+    <None Include="Assets\entities\NPC\animations\info.txt" />
+    <None Include="Assets\entities\NPC\shaders\info.txt" />
+    <None Include="Assets\scripts\characters\info.txt" />
+    <None Include="Assets\source\info.txt" />
+    <None Include="Assets\entities\enemies\shaders\info.txt" />
+    <None Include="Assets\scripts\UI\info.txt" />
+    <None Include="Assets\entities\characters\shaders\info.txt" />
+    <None Include="Assets\data\skills\info.txt" />
+    <None Include="Assets\entities\environment\textures\info.txt" />
+    <None Include="Assets\scripts\combats\info.txt" />
+    <None Include="Assets\entities\NPC\prefabs\info.txt" />
+    <None Include="Assets\entities\environment\prefabs\info.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

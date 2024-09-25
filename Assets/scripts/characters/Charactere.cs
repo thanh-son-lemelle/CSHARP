@@ -1,28 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class Charactere : MonoBehaviour
+public class Character : MonoBehaviour
 {
-    //* Basique stats for a character
-    public int health;
-    public int maxHealth;
-    public int attack;
-    public int defense;
-    public int speed;
-    public int level;
-    public int experience;
-    public int experienceToNextLevel;
+    [SerializeField] private string characterName;
+    [SerializeField] private int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel;
 
-    // List of abilities
-    // Need to create a class for abilities
-    // public List<Ability> abilities = new List<Ability>();
+    // work in progress needs to be implemented
+    // [SerializeField] private Coordinates coordinates;
 
-    //* Constructor
-    public Charactere(string name, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel)
+    //* Constructors
+    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel)
     {
-        this.name = name;
+        this.characterName = characterName;
         this.health = health;
         this.maxHealth = maxHealth;
         this.attack = attack;
@@ -33,11 +23,27 @@ public class Charactere : MonoBehaviour
         this.experienceToNextLevel = experienceToNextLevel;
     }
 
-    //* Basique function
-    // Basique function to take damage
-    // Need to be improved
-    // Maybe with a listener to handle damage
-    public void takeDamage(int amount)
+    // Placeholder for a list of abilities (need to implement the Ability class)
+    // public List<Ability> abilities = new List<Ability>();
+
+    // Initialize values in Unity's Start or Awake method
+    private void Start()
+    {
+        // Initialize character stats (you can do this in the Inspector as well)
+        // random values for now
+        characterName = "Hero";
+        health = 100;
+        maxHealth = 100;
+        attack = 10;
+        defense = 5;
+        speed = 7;
+        level = 1;
+        experience = 0;
+        experienceToNextLevel = 100;
+    }
+
+    // Function to take damage
+    public void TakeDamage(int amount)
     {
         health -= amount;
         if (health < 0)
@@ -46,48 +52,59 @@ public class Charactere : MonoBehaviour
         }
     }
 
-    // Basique function to use an ability
-    // Need to implement the ability system
-    // public void UseAbility(Ability ability, Charactere target)
-    // {
-    //     // Need to implement the ability system
-    // }
-
-    public void attackTarget(Charactere target)
+    // Function to attack another character
+    public void AttackTarget(Character target)
     {
-        // Need to implement the attack system
+        int damage = Mathf.Max(0, attack - target.defense); // Simplified damage calculation
+        target.TakeDamage(damage);
+        Debug.Log($"{characterName} attacks {target.characterName} for {damage} damage!");
     }
 
-    public void gainExperience(int amount)
+    // Function to gain experience and level up
+    public void GainExperience(int amount)
     {
         experience += amount;
         if (experience >= experienceToNextLevel)
         {
-            levelUp();
+            LevelUp();
         }
     }
 
-    public void levelUp()
+    // Level up function
+    private void LevelUp()
     {
         level++;
         experience = experience - experienceToNextLevel;
-        experienceToNextLevel = experienceToNextLevel * 2;
-        maxHealth = maxHealth + 10;
+        experienceToNextLevel *= 2;
+        maxHealth += 10;
         health = maxHealth;
-        attack = attack + 2;
-        defense = defense + 2;
-        speed = speed + 2;
+        attack += 2;
+        defense += 2;
+        speed += 2;
+        Debug.Log($"{characterName} leveled up! Now at level {level}.");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        public void move(string direction, Map map) {
+        Coordinates newPosition = map.calculateNewPosition(this.position, direction);
+
+        // Check if the new position is valid and traversable
+        Terrain terrain = map.getTerrainAt(newPosition);
+
+        if (terrain != null) {
+            // Handle terrain-specific logic (e.g., movement penalties)
+            terrain.enter(this);
+
+            // Update the character's position if the terrain is traversable
+            this.position = newPosition;
+            Debug.Log($"{name} moved to new position: ({position.x}, {position.y})");
+        } else {
+            Debug.Log($"{name} cannot move in that direction.");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    // You can add Update logic here if needed
+    private void Update()
     {
-        
+        // Example: check for level up condition or other updates
     }
 }

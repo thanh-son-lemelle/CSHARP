@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] private int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel;
 
     // work in progress needs to be implemented
-    // [SerializeField] private Coordinates coordinates;
+    [SerializeField] public Coordinates coordinates;
 
     //* Constructors
     public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel)
@@ -40,6 +41,7 @@ public class Character : MonoBehaviour
         level = 1;
         experience = 0;
         experienceToNextLevel = 100;
+        coordinates = new Coordinates(0, 0);
     }
 
     // Function to take damage
@@ -84,22 +86,11 @@ public class Character : MonoBehaviour
         Debug.Log($"{characterName} leveled up! Now at level {level}.");
     }
 
-        public void move(string direction, Map map) {
-        Coordinates newPosition = map.calculateNewPosition(this.position, direction);
-
-        // Check if the new position is valid and traversable
-        Terrain terrain = map.getTerrainAt(newPosition);
-
-        if (terrain != null) {
-            // Handle terrain-specific logic (e.g., movement penalties)
-            terrain.enter(this);
-
-            // Update the character's position if the terrain is traversable
-            this.position = newPosition;
-            Debug.Log($"{name} moved to new position: ({position.x}, {position.y})");
-        } else {
-            Debug.Log($"{name} cannot move in that direction.");
-        }
+    public void MoveTo(Coordinates newCoordinates)
+    {
+        coordinates = newCoordinates;
+        transform.position = GridManager.instance.GetWorldPosition(newCoordinates);
+        Debug.Log($"{characterName} moved to {coordinates}");
     }
 
     // You can add Update logic here if needed

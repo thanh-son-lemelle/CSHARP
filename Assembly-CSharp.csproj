@@ -65,7 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Main.cs" />
-    <Compile Include="Assets\scripts\characters\Charactere.cs" />
+    <Compile Include="Assets\scripts\map\Field.cs" />
+    <Compile Include="Assets\scripts\characters\Character.cs" />
+    <Compile Include="Assets\scripts\utilities\Grid.cs" />
+    <Compile Include="Assets\scripts\map\Forest.cs" />
+    <Compile Include="Assets\scripts\utilities\Coordinates.cs" />
+    <Compile Include="Assets\scripts\map\Map.cs" />
+    <Compile Include="Assets\scripts\utilities\GridManager.cs" />
+    <Compile Include="Assets\scripts\characters\CharacterMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\entities\environment\materials\info.txt" />

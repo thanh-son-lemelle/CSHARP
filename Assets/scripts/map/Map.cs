@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<Field> fields = new List<Field>();
 
-    // Update is called once per frame
-    void Update()
+    public Field GetField(Coordinates coordinates)
     {
-        
+        return fields.Find(field => field.coordinates == coordinates);
     }
 }

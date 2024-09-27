@@ -67,12 +67,23 @@
     <Compile Include="Assets\scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Main.cs" />
     <Compile Include="Assets\scripts\MenuController.cs" />
+    <Compile Include="Assets\scripts\map\Field.cs" />
     <Compile Include="Assets\scripts\UI\GameUi.cs" />
+    <Compile Include="Assets\scripts\utilities\MouseTracking.cs" />
+    <Compile Include="Assets\scripts\characters\Character.cs" />
+    <Compile Include="Assets\scripts\utilities\Grid.cs" />
+    <Compile Include="Assets\scripts\map\Forest.cs" />
     <Compile Include="Assets\scripts\UI\MouseHover.cs" />
+    <Compile Include="Assets\scripts\utilities\Coordinates.cs" />
     <Compile Include="Assets\scripts\TestSetup.cs" />
     <Compile Include="Assets\scripts\utilities\InventorySlot.cs" />
+    <Compile Include="Assets\scripts\test\gridTest\Testing.cs" />
+    <Compile Include="Assets\scripts\map\Map.cs" />
     <Compile Include="Assets\scripts\GameController.cs" />
+    <Compile Include="Assets\scripts\utilities\GridManager.cs" />
     <Compile Include="Assets\scripts\utilities\Inventory.cs" />
+    <Compile Include="Assets\scripts\utilities\TextRender.cs" />
+    <Compile Include="Assets\scripts\characters\CharacterMovement.cs" />
     <Compile Include="Assets\scripts\utilities\InventoryItem.cs" />
     <Compile Include="Assets\scripts\utilities\Item.cs" />
   </ItemGroup>
@@ -81,7 +92,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\entities\environment\materials\info.txt" />
     <None Include="Assets\entities\characters\animations\info.txt" />
-    <None Include="Assets\fonts\info.txt" />
     <None Include="Assets\entities\enemies\prefabs\info.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\audio\SFX\info.txt" />
@@ -103,7 +113,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\entities\environment\models\info.txt" />
     <None Include="Assets\audio\music\info.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />

@@ -59,53 +59,60 @@
     <UnityVersion>2022.3.47f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\tslem\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\Vanny Laure Lamorte\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Main.cs" />
-    <Compile Include="Assets\scripts\map\Field.cs" />
-    <Compile Include="Assets\scripts\utilities\MouseTracking.cs" />
-    <Compile Include="Assets\scripts\characters\Character.cs" />
-    <Compile Include="Assets\scripts\utilities\Grid.cs" />
-    <Compile Include="Assets\scripts\map\Forest.cs" />
-    <Compile Include="Assets\scripts\utilities\Coordinates.cs" />
-    <Compile Include="Assets\scripts\test\gridTest\Testing.cs" />
-    <Compile Include="Assets\scripts\map\Map.cs" />
-    <Compile Include="Assets\scripts\utilities\GridManager.cs" />
-    <Compile Include="Assets\scripts\utilities\TextRender.cs" />
-    <Compile Include="Assets\scripts\characters\CharacterMovement.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\entities\environment\materials\info.txt" />
     <None Include="Assets\entities\characters\animations\info.txt" />
-    <None Include="Assets\entities\NPC\models\info.txt" />
     <None Include="Assets\fonts\info.txt" />
     <None Include="Assets\entities\enemies\prefabs\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\audio\SFX\info.txt" />
     <None Include="Assets\data\items\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\data\characters\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\entities\environment\shaders\info.txt" />
     <None Include="Assets\scripts\utilities\info.txt" />
     <None Include="Assets\entities\characters\models\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\entities\enemies\models\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\entities\characters\prefabs\info.txt" />
     <None Include="Assets\entities\enemies\animations\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\entities\environment\models\info.txt" />
     <None Include="Assets\audio\music\info.txt" />
-    <None Include="Assets\entities\NPC\animations\info.txt" />
-    <None Include="Assets\entities\NPC\shaders\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\scripts\characters\info.txt" />
     <None Include="Assets\source\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\entities\enemies\shaders\info.txt" />
     <None Include="Assets\scripts\UI\info.txt" />
     <None Include="Assets\entities\characters\shaders\info.txt" />
     <None Include="Assets\data\skills\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\entities\environment\textures\info.txt" />
     <None Include="Assets\scripts\combats\info.txt" />
-    <None Include="Assets\entities\NPC\prefabs\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\entities\environment\prefabs\info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

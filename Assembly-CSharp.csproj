@@ -69,6 +69,7 @@
     <Compile Include="Assets\Main.cs" />
     <Compile Include="Assets\scripts\MenuController.cs" />
     <Compile Include="Assets\scripts\map\Field.cs" />
+    <Compile Include="Assets\scripts\UI\CharacterOrientation.cs" />
     <Compile Include="Assets\scripts\UI\GameUi.cs" />
     <Compile Include="Assets\scripts\utilities\MouseTracking.cs" />
     <Compile Include="Assets\scripts\characters\Character.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\scripts\map\Forest.cs" />
     <Compile Include="Assets\scripts\UI\MouseHover.cs" />
     <Compile Include="Assets\scripts\utilities\Coordinates.cs" />
+    <Compile Include="Assets\scripts\UI\MoveWorld.cs" />
     <Compile Include="Assets\scripts\TestSetup.cs" />
     <Compile Include="Assets\scripts\utilities\InventorySlot.cs" />
     <Compile Include="Assets\scripts\test\gridTest\Testing.cs" />

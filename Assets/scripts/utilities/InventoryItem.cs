@@ -30,6 +30,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = false;
         originalSlot = GetComponentInParent<InventorySlot>(); // Set originalSlot
         parentAfterDrag = transform.parent;
+
+        // Move the dragged item to the parent canvas to ensure it's above other UI elements
         transform.SetParent(parentCanvas.transform, true);
         transform.SetAsLastSibling();
         if (tooltip != null)
@@ -102,10 +104,11 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnPointerEnter(PointerEventData eventData)
     {
         // Show the tooltip on hover
-        if (tooltip != null && item != null)
+        if (tooltip != null && item != null && item.Quantity > 0)
         {
             tooltip.SetActive(true);
             tooltipTextTitle.text = item.Name;        // Set the tooltip text to the item's name or description
+            tooltipTextDecription.text = "<size=24>" + item.Type + "</size>\n<line-height=1.5><size=18>" + item.Effect + "</size></line-height>";
         }
     }
 

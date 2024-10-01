@@ -5,13 +5,13 @@ using UnityEngine.UIElements;
 public class Character : MonoBehaviour
 {
     [SerializeField] private string characterName;
-    [SerializeField] private int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel;
+    [SerializeField] private int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel, characterID;
 
     // work in progress needs to be implemented
-    [SerializeField] public Coordinates coordinates;
+    public Coordinates coordinates;
 
     //* Constructors
-    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel)
+    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
         this.characterName = characterName;
         this.health = health;
@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
         this.level = level;
         this.experience = experience;
         this.experienceToNextLevel = experienceToNextLevel;
+        this.characterID = characterID;
     }
 
     // Placeholder for a list of abilities (need to implement the Ability class)
@@ -42,6 +43,22 @@ public class Character : MonoBehaviour
         experience = 0;
         experienceToNextLevel = 100;
         coordinates = new Coordinates(0, 0);
+    }
+
+    // Instead of a constructor, use this Initialize method to set character properties
+    public void Initialize(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
+    {
+        this.characterName = characterName;
+        this.health = health;
+        this.maxHealth = maxHealth;
+        this.attack = attack;
+        this.defense = defense;
+        this.speed = speed;
+        this.level = level;
+        this.experience = experience;
+        this.experienceToNextLevel = experienceToNextLevel;
+        this.coordinates = new Coordinates(0, 0); // Default coordinates or set dynamically
+        this.characterID = characterID;
     }
 
     // Function to take damage

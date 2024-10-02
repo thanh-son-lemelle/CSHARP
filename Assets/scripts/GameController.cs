@@ -5,10 +5,8 @@ public class GameController : MonoBehaviour
 {
     // Singleton instance
     public static GameController Instance { get; private set; }
-
     public Inventory inventory; // Reference to the Inventory system
     public InventoryUI inventoryUI; // Reference to the Inventory UI system
-
     public Player player; // Reference to the Player system
     public CharacterUI characterUI; // Reference to the Player system
 
@@ -37,22 +35,12 @@ public class GameController : MonoBehaviour
         // Update the UI to reflect the new items
         UpdateInventoryUI();
 
-        Debug.Log("Start method called.");
-    if (characterUI == null)
-    {
-        Debug.LogError("characterUI is not assigned in the GameController.");
-        return; // Stop execution if characterUI is not assigned
-    }
+        // Active character display
+        Debug.Log("Calling UpdateCharacterSprite with ID 4");
+        characterUI.UpdateCharacterSprite(4);
 
-    else {
-
-            Debug.LogError("GOOD");
-    }
-
-    characterUI.SetCharacterActive(true);
-
-        characterUI.UpdateCharacterSprite(2);
-    }
+        characterUI.UpdateCharacterSprite(4);
+    }  
 
     // Method to add some test items to the inventory
     private void InitializeTestItems()
@@ -84,10 +72,10 @@ public class GameController : MonoBehaviour
     
     public void InitializePlayer()
     {
-        // Ensure player is initialized
+        // Initialize the player if it's null
         if (player == null)
         {
-            player = new Player(); // Initialize the player if it's null
+            player = new Player();
         }
 
         // Create a GameObject for each character
@@ -112,17 +100,9 @@ public class GameController : MonoBehaviour
         player.characters.Add(hero3);
         player.characters.Add(hero4);
 
-        // Debug log to confirm that the player and characters are created
+        // Debug to confirm that the player and characters are created
         Debug.Log("Player initialized with characters: " + player.characters.Count);
     }
-
-    public void SwitchCharacter(int newCharacterID)
-{
-    // Update to the new character
-    characterUI.UpdateCharacterSprite(newCharacterID);
-}
-
-
 }
 
 

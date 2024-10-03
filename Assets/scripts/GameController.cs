@@ -8,38 +8,38 @@ public class GameController : MonoBehaviour
     public Inventory inventory; // Reference to the Inventory system
     public InventoryUI inventoryUI; // Reference to the Inventory UI system
     public Player player; // Reference to the Player system
-    public CharacterUI characterUI; // Reference to the Player system
+    public CharacterUI characterUI; // Reference to the Player system;
+    public CharacterUIManager  characterUIManager; 
 
     private void Awake()
     {
         // If an instance already exists and it's not this one, destroy this GameObject
         if (Instance != null && Instance != this)
         {
+            
             Destroy(gameObject);
             return;
         }
 
         // Set the instance to this instance
         Instance = this;
+
+         // Initialize the player
+        InitializePlayer();
+
+
     }
 
     private void Start()
     {
 
         // Initialize the inventory with test items
-        InitializeTestItems();
-
-        // Initialize the player
-        InitializePlayer();
+        InitializeTestItems();       
 
         // Update the UI to reflect the new items
         UpdateInventoryUI();
 
-        // Active character display
-        Debug.Log("Calling UpdateCharacterSprite with ID 4");
-        characterUI.UpdateCharacterSprite(4);
-
-        characterUI.UpdateCharacterSprite(4);
+        // characterUI.UpdateCharacterSprite(4);
     }  
 
     // Method to add some test items to the inventory
@@ -72,37 +72,17 @@ public class GameController : MonoBehaviour
     
     public void InitializePlayer()
     {
-        // Initialize the player if it's null
-        if (player == null)
-        {
-            player = new Player();
-        }
-
-        // Create a GameObject for each character
-        GameObject heroObject1 = new GameObject("HeroObject1");
-        GameObject heroObject2 = new GameObject("HeroObject2");
-        GameObject heroObject3 = new GameObject("HeroObject3");
-        GameObject heroObject4 = new GameObject("HeroObject4");
-
-        // Add the Character component to the GameObjects and initialize them
-        Character hero1 = heroObject1.AddComponent<Character>();
-        hero1.Initialize("Hero1", 100, 100, 10, 5, 7, 1, 0, 100, 1);
-        Character hero2 = heroObject2.AddComponent<Character>();
-        hero2.Initialize("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2);
-        Character hero3 = heroObject3.AddComponent<Character>();
-        hero3.Initialize("Hero3", 60, 60, 8, 4, 6, 1, 0, 100, 3);
-        Character hero4 = heroObject4.AddComponent<Character>();
-        hero4.Initialize("Hero4", 45, 40, 8, 4, 6, 1, 0, 100, 4);
-     
+        player = new Player();       
         // Add characters to the player's character list
-        player.characters.Add(hero1);
-        player.characters.Add(hero2);
-        player.characters.Add(hero3);
-        player.characters.Add(hero4);
+        player.characters.Add(new Character("Hero1", 70, 100, 10, 5, 7, 1, 0, 100, 1));
+        player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));    
+        player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 2));    
+        player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 2));    
 
         // Debug to confirm that the player and characters are created
         Debug.Log("Player initialized with characters: " + player.characters.Count);
-    }
+
+   }
 }
 
 

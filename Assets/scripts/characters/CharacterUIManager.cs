@@ -15,28 +15,48 @@ public class CharacterUIManager : MonoBehaviour
     {
         DisplayCharacters(); 
     }
-  public void DisplayCharacters()
+    
+    public void DisplayCharacters()
+{
+    Debug.Log("DisplayCharacters called");
+
+    if (GameController.Instance != null && GameController.Instance.player != null)
     {
-        Debug.Log("DisplayCharacters called");
-
-        if (GameController.Instance != null && GameController.Instance.player != null)
+        foreach (Transform child in uiContainer)
         {
-            foreach(Transform child in uiContainer){
-                Destroy(child.gameObject); 
-            }
-
-            foreach (Character character in GameController.Instance.player.characters)
-            {
-                Debug.Log($"Affichage du personnage: {character.characterName}, ID: {character.characterID}, Santé: {character.health}/{character.maxHealth}, Niveau: {character.level}");
-
-                GameObject characterUIObject = Instantiate(characterUIPrefab, uiContainer);
-                CharacterUI characterUI = characterUIObject.GetComponent<CharacterUI>();
-                characterUI.Initialize(character);
-            }
+            Destroy(child.gameObject); 
         }
-        else
+
+        foreach (Character character in GameController.Instance.player.characters)
         {
-            Debug.LogError("GameController ou Player est nul !");
+            Debug.Log($"Creating UI for character: {character.characterName}");
+
+            GameObject characterUIObject = Instantiate(characterUIPrefab, uiContainer);
+
+            // Ensure the whole GameObject is active
+            characterUIObject.SetActive(true);
+
+            CharacterUI characterUI = characterUIObject.GetComponent<CharacterUI>();
+
+            // Check if the CharacterUI component is correctly attached to the prefab
+            if (characterUI == null)
+            {
+                Debug.LogError("CharacterUI component not found on the instantiated prefab.");
+                continue;
+            }
+
+            // Initialize the character's UI and ensure that each part is active
+            characterUI.Initialize(character);
+
+            // Optionally, force activation of individual UI elements
+            characterUI.characterNameText.gameObject.SetActive(true);
+            characterUI.healthBar.gameObject.SetActive(true);
+            characterUI.levelText.gameObject.SetActive(true);
         }
     }
+    else
+    {
+        Debug.LogError("GameController or Player is null!");
+    }
+}
 }

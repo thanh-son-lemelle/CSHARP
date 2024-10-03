@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 public class CharacterUI : MonoBehaviour
 {
@@ -24,8 +25,8 @@ public class CharacterUI : MonoBehaviour
     // Method to initialize the character's UI
     public void Initialize(Character character)
     {
+        UpdateCharacterUI(character);
         this.character = character;
-        UpdateCharacterUI();
         if (attackButton != null)
         {
             attackButton.onClick.AddListener(OnAttackButtonClicked);
@@ -85,7 +86,7 @@ public class CharacterUI : MonoBehaviour
         if (target != null)
         {
             character.AttackTarget(target); // Call the attack method
-            UpdateCharacterUI(); // Update UI after the attack
+            // UpdateCharacterUI(); // Update UI after the attack
         }
     }
 
@@ -99,19 +100,24 @@ public class CharacterUI : MonoBehaviour
     private void Update()
     {
         // Update the UI values each frame if needed
-        UpdateCharacterUI();
+        // UpdateCharacterUI(Character character);
     }
 
     // Method to update the character's UI
-    public void UpdateCharacterUI()
+    public void UpdateCharacterUI(Character character)
     {
 
-        if (character == null)return; 
+           characterNameText.gameObject.SetActive(true);
+
+
+
         characterNameText.text = character.characterName;
+        characterNameText.gameObject.SetActive(true);
         healthBar.maxValue = character.maxHealth;
         healthBar.value = character.health;
         levelText.text = "Level: " + character.level;
         experienceBar.value = character.experience;
+         UpdateCharacterSprite(character.characterID);
     }
 
 }

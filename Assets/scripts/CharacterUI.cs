@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.ComponentModel;
+using TMPro;
 
 public class CharacterUI : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class CharacterUI : MonoBehaviour
     public Sprite character4;
 
     public Image characterImage; 
-    public Text characterNameText; 
+    public TextMeshProUGUI characterNameText; 
     public Slider healthBar; 
-    public Text levelText; 
+    public TextMeshProUGUI levelText; 
     public Slider experienceBar; 
     public Button attackButton;
     private Character character; 
@@ -108,8 +109,6 @@ public class CharacterUI : MonoBehaviour
     {
 
            characterNameText.gameObject.SetActive(true);
-
-
 
         characterNameText.text = character.characterName;
         characterNameText.gameObject.SetActive(true);

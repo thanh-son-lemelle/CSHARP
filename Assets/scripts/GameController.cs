@@ -76,8 +76,8 @@ public class GameController : MonoBehaviour
         // Add characters to the player's character list
         player.characters.Add(new Character("Hero1", 70, 100, 10, 5, 7, 1, 0, 100, 1));
         player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));    
-        player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 2));    
-        player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 2));    
+        player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 3));    
+        player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 4));    
 
         // Debug to confirm that the player and characters are created
         Debug.Log("Player initialized with characters: " + player.characters.Count);

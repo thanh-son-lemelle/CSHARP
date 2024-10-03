@@ -13,7 +13,6 @@ public class CharacterUIManager : MonoBehaviour
 
     private void Start()
     {
-        DisplayCharacters(); 
     }
     
     public void DisplayCharacters()

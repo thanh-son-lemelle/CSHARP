@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField] public string characterName;
     [SerializeField] public int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel, characterID;
 
-    // work in progress needs to be implemented
+
     public Coordinates coordinates;
 
     //Constructors

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player
 {
     public List<Character> characters;  // Liste de personnages
-    public int activeCharacterID;  // ID du personnage actif
+    public int activeCharacterID = 1;  // ID du personnage actif
 
     public Player()
     {

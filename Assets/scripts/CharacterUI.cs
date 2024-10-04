@@ -87,7 +87,7 @@ public class CharacterUI : MonoBehaviour
                 break;
         }
         rect.sizeDelta = new Vector2
-        (30, 30);
+        (60, 60);
     }
 
     // Method called when the attack button is clicked

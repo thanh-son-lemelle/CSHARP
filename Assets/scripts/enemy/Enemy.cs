@@ -1,7 +1,7 @@
 using UnityEngine; 
 using System.Collections.Generic;
 
-public class Enemy: MonoBehaviour {
+public class Enemy {
 
     public List <Character> enemies{get; set;}
 

@@ -13,22 +13,22 @@ public class MoveWorld : MonoBehaviour
         // Check for input and move the background
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) // Right Arrow or D
         {
-            movement -= Vector3.right * moveSpeed * Time.deltaTime;
+            movement += Vector3.right * moveSpeed * Time.deltaTime;
             isMoving = true;
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q)) // Left Arrow or Q
         {
-            movement -= Vector3.left * moveSpeed * Time.deltaTime;
+            movement += Vector3.left * moveSpeed * Time.deltaTime;
             isMoving = true;
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Z)) // Up Arrow or Z
         {
-            movement -= Vector3.up * moveSpeed * Time.deltaTime;
+            movement += Vector3.up * moveSpeed * Time.deltaTime;
             isMoving = true;
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) // Down Arrow or S
         {
-            movement -= Vector3.down * moveSpeed * Time.deltaTime;
+            movement += Vector3.down * moveSpeed * Time.deltaTime;
             isMoving = true;
         }
 

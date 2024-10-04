@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Initialize the inventory with default empty slots
-    private void InitializeInventory()
+    public void InitializeInventory()
     {
         itemList.Clear(); // Clear any existing items
 

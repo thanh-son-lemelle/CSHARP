@@ -4,14 +4,14 @@ using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private string characterName;
-    [SerializeField] private int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel;
+    [SerializeField] public string characterName;
+    [SerializeField] public int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel, characterID;
 
     // work in progress needs to be implemented
-    [SerializeField] public Coordinates coordinates;
+    public Coordinates coordinates;
 
-    //* Constructors
-    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel)
+    //Constructors
+    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
         this.characterName = characterName;
         this.health = health;
@@ -22,26 +22,27 @@ public class Character : MonoBehaviour
         this.level = level;
         this.experience = experience;
         this.experienceToNextLevel = experienceToNextLevel;
+        this.characterID = characterID;
     }
 
     // Placeholder for a list of abilities (need to implement the Ability class)
     // public List<Ability> abilities = new List<Ability>();
 
-    // Initialize values in Unity's Start or Awake method
-    private void Start()
+
+    // Instead of a constructor, use this Initialize method to set character properties
+    public void Initialize(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
-        // Initialize character stats (you can do this in the Inspector as well)
-        // random values for now
-        characterName = "Hero";
-        health = 100;
-        maxHealth = 100;
-        attack = 10;
-        defense = 5;
-        speed = 7;
-        level = 1;
-        experience = 0;
-        experienceToNextLevel = 100;
-        coordinates = new Coordinates(0, 0);
+        this.characterName = characterName;
+        this.health = health;
+        this.maxHealth = maxHealth;
+        this.attack = attack;
+        this.defense = defense;
+        this.speed = speed;
+        this.level = level;
+        this.experience = experience;
+        this.experienceToNextLevel = experienceToNextLevel;
+        this.coordinates = new Coordinates(0, 0); // Default coordinates or set dynamically
+        this.characterID = characterID;
     }
 
     // Function to take damage
@@ -98,4 +99,6 @@ public class Character : MonoBehaviour
     {
         // Example: check for level up condition or other updates
     }
+
+
 }

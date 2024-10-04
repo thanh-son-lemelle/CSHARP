@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("UI")]
     public Image image;                // Reference to the UI Image for the item icon
@@ -12,8 +13,13 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Canvas parentCanvas;
 
     // Add a reference to the item
-    public Item item; // Ensure this is assigned correctly
+    public Item item;
 
+    // Tooltip UI
+    public GameObject tooltip;        // Tooltip GameObject reference
+    public Image tooltipImage;        // Image inside the tooltip
+    public TextMeshProUGUI tooltipTextTitle;          // Text inside the tooltip
+    public TextMeshProUGUI tooltipTextDecription;          // Text inside the tooltip
     private void Start()
     {
         parentCanvas = GetComponentInParent<Canvas>();
@@ -24,8 +30,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = false;
         originalSlot = GetComponentInParent<InventorySlot>(); // Set originalSlot
         parentAfterDrag = transform.parent;
+
+        // Move the dragged item to the parent canvas to ensure it's above other UI elements
         transform.SetParent(parentCanvas.transform, true);
         transform.SetAsLastSibling();
+        if (tooltip != null)
+        {
+            tooltip.SetActive(false);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -37,6 +49,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
+        if (tooltip != null) tooltip.SetActive(true);
     }
 
     public void UpdateItem(Item item, InventoryUI inventoryUI)
@@ -85,6 +98,26 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             Color textColor = quantityText.color;
             textColor.a = quantity > 0 ? 1f : 0f; // Set alpha based on quantity
             quantityText.color = textColor;
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        // Show the tooltip on hover
+        if (tooltip != null && item != null && item.Quantity > 0)
+        {
+            tooltip.SetActive(true);
+            tooltipTextTitle.text = item.Name;        // Set the tooltip text to the item's name or description
+            tooltipTextDecription.text = "<size=24>" + item.Type + "</size>\n<line-height=1.5><size=18>" + item.Effect + "</size></line-height>";
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        // Hide the tooltip when not hovering
+        if (tooltip != null)
+        {
+            tooltip.SetActive(false);
         }
     }
 }

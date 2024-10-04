@@ -1,22 +1,27 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterOrientation : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer; // Reference to the Sprite Renderer
+    public Image image; // Reference to the Image component
 
     void Update()
     {
         // Move the character based on input
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        // Flip sprite based on movement direction
+        // Get the RectTransform component from the image
+        RectTransform rectTransform = image.GetComponent<RectTransform>();
+
+        // Flip the image by rotating the Y axis based on movement direction
         if (horizontalInput < 0)
         {
-            spriteRenderer.flipX = true; // Flip left
+            rectTransform.localRotation = Quaternion.Euler(0, 180, 0); // Flip left
         }
         else if (horizontalInput > 0)
         {
-            spriteRenderer.flipX = false; // Flip right
+            rectTransform.localRotation = Quaternion.Euler(0, 0, 0); // Flip right
         }
     }
 }
+    

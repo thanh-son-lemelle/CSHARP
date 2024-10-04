@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public CharacterUI characterUI; // Reference to the Player system;
     public CharacterUIManager  characterUIManager; 
     public EnemyUIManager  enemyUIManager; 
-    public Enemy enemy; 
+    [HideInInspector] public Enemy enemy; 
 
     private void Awake()
     {
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
 
         // Initialize Enemy
         InitializeEnemy();
-        enemyUIManager.DisplayEnemies();
+        // enemyUIManager.DisplayEnemies();
 
 
 

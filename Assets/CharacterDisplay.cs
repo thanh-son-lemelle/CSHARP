@@ -1,64 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterDisplay : MonoBehaviour
 {
-    private Sprite activeSprite;
     [SerializeField] public Image activeImage; // Image for displaying the current sprite
-    [SerializeField] public Sprite sprite1;    // Sprite for character 1
-    [SerializeField] public Sprite sprite2;    // Sprite for character 2
-    [SerializeField] public Sprite sprite3;    // Sprite for character 3
-    [SerializeField] public Sprite sprite4;    // Sprite for character 4
-
-    [SerializeField] public RuntimeAnimatorController animatorController1; // Animator controller for character 1
-    [SerializeField] public RuntimeAnimatorController animatorController2; // Animator controller for character 2
-    [SerializeField] public RuntimeAnimatorController animatorController3; // Animator controller for character 3
-    [SerializeField] public RuntimeAnimatorController animatorController4; // Animator controller for character 4
-
+    [SerializeField] public Sprite[] characterSprites; // Array for character sprites
+    [SerializeField] public RuntimeAnimatorController[] animatorControllers; // Array for animator controllers
     [SerializeField] public Animator activeAnimator; // Animator for the character (shared)
 
-    // Start is called before the first frame update
     void Start()
     {
         // Initialize the active sprite and animator controller
-        UpdateCharacterDisplay();
+        UpdateCharacterDisplay(PlayerController.Instance.player.activeCharacterID);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        UpdateCharacterDisplay();
+        UpdateCharacterDisplay(PlayerController.Instance.player.activeCharacterID);
     }
 
-    // Method to update both sprite and animator controller based on the active character ID
-    private void UpdateCharacterDisplay()
+    public void UpdateCharacterDisplay(int characterID)
     {
-        switch (GameController.Instance.player.activeCharacterID)
+        if (characterID < 1 || characterID > characterSprites.Length)
         {
-            case 1:
-                activeSprite = sprite1;
-                activeAnimator.runtimeAnimatorController = animatorController1;
-                break;
-            case 2:
-                activeSprite = sprite2;
-                activeAnimator.runtimeAnimatorController = animatorController2;
-                break;
-            case 3:
-                activeSprite = sprite3;
-                activeAnimator.runtimeAnimatorController = animatorController3;
-                break;
-            case 4:
-                activeSprite = sprite4;
-                activeAnimator.runtimeAnimatorController = animatorController4;
-                break;
-            default:
-                Debug.LogError("Invalid activeCharacterID.");
-                return;
+            Debug.LogError("Invalid activeCharacterID.");
+            return;
         }
 
-        // Update the active image with the new sprite
-        activeImage.sprite = activeSprite;
+        // Update sprite and animator
+        activeImage.sprite = characterSprites[characterID - 1];
+        activeAnimator.runtimeAnimatorController = animatorControllers[characterID - 1];
     }
 }

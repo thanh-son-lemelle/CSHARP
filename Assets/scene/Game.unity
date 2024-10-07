@@ -2274,14 +2274,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeImage: {fileID: 1246300724}
-  sprite1: {fileID: 21300000, guid: 465ea5c2340d83b4db430ce7ea672135, type: 3}
-  sprite2: {fileID: 21300000, guid: 2dd0b725edaeb7f41842a1ec9e0fcf61, type: 3}
-  sprite3: {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
-  sprite4: {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
-  animatorController1: {fileID: 9100000, guid: 4f28c6a7cb4d263469b44468ad4b0cf4, type: 2}
-  animatorController2: {fileID: 9100000, guid: b9dec2e475e45a74aa4055e42c315c5d, type: 2}
-  animatorController3: {fileID: 9100000, guid: bd8e8d3985e75094e96d19f37473b0b5, type: 2}
-  animatorController4: {fileID: 9100000, guid: bd8e8d3985e75094e96d19f37473b0b5, type: 2}
+  characterSprites:
+  - {fileID: 21300000, guid: 465ea5c2340d83b4db430ce7ea672135, type: 3}
+  - {fileID: 21300000, guid: 2dd0b725edaeb7f41842a1ec9e0fcf61, type: 3}
+  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
+  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
+  animatorControllers:
+  - {fileID: 9100000, guid: 4f28c6a7cb4d263469b44468ad4b0cf4, type: 2}
+  - {fileID: 9100000, guid: b9dec2e475e45a74aa4055e42c315c5d, type: 2}
+  - {fileID: 9100000, guid: bd8e8d3985e75094e96d19f37473b0b5, type: 2}
+  - {fileID: 9100000, guid: bd8e8d3985e75094e96d19f37473b0b5, type: 2}
   activeAnimator: {fileID: 1246300723}
 --- !u!1 &1062573305
 GameObject:
@@ -4532,10 +4534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4295246254396839358, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4298691344543918885, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4544,10 +4542,6 @@ PrefabInstance:
       propertyPath: characterMainPanel
       value: 
       objectReference: {fileID: 204605006}
-    - target: {fileID: 7192847545766305160, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

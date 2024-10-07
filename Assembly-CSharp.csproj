@@ -96,6 +96,7 @@
     <Compile Include="Assets\scripts\test\gridTest\TestingGridInt.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\scripts\UI\EnemyUIManager.cs" />
+    <Compile Include="Assets\scripts\player\NewGame.cs" />
     <Compile Include="Assets\scripts\UI\CameraController.cs" />
     <Compile Include="Assets\scripts\utilities\Inventory.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\scripts\characters\CharacterMovement.cs" />
     <Compile Include="Assets\scripts\utilities\GridInt.cs" />
     <Compile Include="Assets\scripts\utilities\InventoryItem.cs" />
+    <Compile Include="Assets\scripts\player\PlayerController.cs" />
     <Compile Include="Assets\scripts\utilities\Item.cs" />
   </ItemGroup>
   <ItemGroup>

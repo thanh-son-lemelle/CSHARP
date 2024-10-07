@@ -90,26 +90,6 @@ public class CharacterUI : MonoBehaviour
         (60, 60);
     }
 
-    // Method called when the attack button is clicked
-    private void OnAttackButtonClicked()
-    {
-        // Attack another character or perform an action
-        // Example: Simulate an attack on another character (to be defined)
-        Character target = FindTargetCharacter(); // Implement this
-        if (target != null)
-        {
-            character.AttackTarget(target); // Call the attack method
-            // UpdateCharacterUI(); // Update UI after the attack
-        }
-    }
-
-    // Method to simulate finding a target character (implement according to your game's logic)
-    private Character FindTargetCharacter()
-    {
-
-        return null;
-    }
-
     private void Update()
     {
         // Update the UI values each frame if needed
@@ -133,8 +113,7 @@ public class CharacterUI : MonoBehaviour
 
     private void OnCharacterButtonClicked()
     {
-        GameController.Instance.player.SetActiveCharacter(character.characterID);
-        GameController.Instance.player.SetActiveCharacter(character.characterID);
+        PlayerController.Instance.player.SetActiveCharacter(character.characterID);
         characterMainPanel.SetActive(false);
     }
 

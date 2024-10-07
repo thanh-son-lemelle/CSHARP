@@ -21,7 +21,7 @@ public class EnemyUIManager {
     Debug.Log(">DISPLAY ENEMY");
     
 
-    if (GameController.Instance != null && GameController.Instance.player != null)
+    if (GameController.Instance != null && PlayerController.Instance.player != null)
     {
         foreach (Character enemies in GameController.Instance.enemy.enemies)
         {

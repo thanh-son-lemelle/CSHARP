@@ -19,14 +19,14 @@ public class CharacterUIManager : MonoBehaviour
 {
     Debug.Log("DisplayCharacters called");
 
-    if (GameController.Instance != null && GameController.Instance.player != null)
+    if (GameController.Instance != null && PlayerController.Instance.player != null)
     {
         foreach (Transform child in uiContainer)
         {
             Destroy(child.gameObject); 
         }
 
-        foreach (Character character in GameController.Instance.player.characters)
+        foreach (Character character in PlayerController.Instance.player.characters)
         {
             Debug.Log($"Creating UI for character: {character.characterName}");
 

@@ -1,10 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using System.ComponentModel;
 using TMPro;
-using System.Runtime.CompilerServices;
 
 public class CharacterUI : MonoBehaviour
 {

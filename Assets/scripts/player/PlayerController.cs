@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         player = new Player();
     }

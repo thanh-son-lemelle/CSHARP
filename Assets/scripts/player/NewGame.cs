@@ -45,5 +45,7 @@ public class NewGame : MonoBehaviour
                 break;
         }
         Debug.Log("Player initialized with character number : " + CharacterNumber);
+        PlayerController.Instance.player.SetActiveCharacter(CharacterNumber);
+
     }
 }

@@ -648,16 +648,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 6986310465845970120}
-  character1: {fileID: 21300000, guid: 68224ab415c843a4f92546c6e2800e6b, type: 3}
-  character2: {fileID: 21300000, guid: b912d59f45d8fd34dbdf43f1715dcd81, type: 3}
-  character3: {fileID: 21300000, guid: d6b0448a5b94e674cb46cf412eae39e9, type: 3}
-  character4: {fileID: 21300000, guid: 554ad6651749ceb45954ad05b0a122a0, type: 3}
-  characterImage: {fileID: 6986310465845970120}
   characterNameText: {fileID: 2701503368666199806}
   healthBar: {fileID: 8012864914313651282}
   levelText: {fileID: 3891760884627532295}
   experienceBar: {fileID: 3491144369432233566}
   attackButton: {fileID: 0}
+  playerSprites:
+  - {fileID: 21300000, guid: 465ea5c2340d83b4db430ce7ea672135, type: 3}
+  - {fileID: 21300000, guid: 2dd0b725edaeb7f41842a1ec9e0fcf61, type: 3}
+  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
+  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
   characterButton: {fileID: 3483809062507475497}
   characterMainPanel: {fileID: 0}
 --- !u!1 &4396116463988201496
@@ -975,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162.3, y: -11.539}
+  m_AnchoredPosition: {x: -158.6, y: 3.9862}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1445223460716008205

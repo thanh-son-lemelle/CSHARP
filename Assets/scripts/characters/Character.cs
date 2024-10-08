@@ -85,11 +85,12 @@ public class Character
         Debug.Log($"{characterName} leveled up! Now at level {level}.");
     }
 
-    public void MoveTo(Coordinates newCoordinates)
-    {
-        coordinates = newCoordinates;
-        Debug.Log($"{characterName} moved to {coordinates}");
-    }
+    // public void MoveTo(Coordinates newCoordinates)
+    // {
+    //     coordinates = newCoordinates;
+    //     transform.position = GridManager.instance.GetWorldPosition(newCoordinates);
+    //     Debug.Log($"{characterName} moved to {coordinates}");
+    // }
 
     private void Update()
     {

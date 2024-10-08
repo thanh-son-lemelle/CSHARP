@@ -19,7 +19,9 @@ public class Player
         }
         else
         {
-            Debug.LogError($"ID : {characterID} not found !");
+            Debug.LogError($"ID : {characterID-1} not found !");
         }
     }
+
+    
 }

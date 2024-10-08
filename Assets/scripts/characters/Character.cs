@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Character : MonoBehaviour
+public class Character
 {
     [SerializeField] public string characterName;
     [SerializeField] public int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel, characterID;
@@ -87,12 +87,12 @@ public class Character : MonoBehaviour
         Debug.Log($"{characterName} leveled up! Now at level {level}.");
     }
 
-    public void MoveTo(Coordinates newCoordinates)
-    {
-        coordinates = newCoordinates;
-        transform.position = GridManager.instance.GetWorldPosition(newCoordinates);
-        Debug.Log($"{characterName} moved to {coordinates}");
-    }
+    // public void MoveTo(Coordinates newCoordinates)
+    // {
+    //     coordinates = newCoordinates;
+    //     transform.position = GridManager.instance.GetWorldPosition(newCoordinates);
+    //     Debug.Log($"{characterName} moved to {coordinates}");
+    // }
 
     // You can add Update logic here if needed
     private void Update()

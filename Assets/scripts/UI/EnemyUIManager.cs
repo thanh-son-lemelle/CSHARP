@@ -16,27 +16,24 @@ public class EnemyUIManager {
     public Character character;
 
 
-    public void DisplayEnemies()
-{
-    Debug.Log(">DISPLAY ENEMY");
+//     public void DisplayEnemies()
+// {
+//     Debug.Log(">DISPLAY ENEMY");
     
 
-    if (GameController.Instance != null && GameController.Instance.player != null)
-    {
-        foreach (Character enemies in GameController.Instance.enemy.enemies)
-        {
-            Debug.Log($"Enemy Name: {enemies.characterName}");
-            Debug.Log($"Enemy Health: {enemies.health}");
-            Debug.Log($"Enemy Level: {enemies.level}");
-            enemyUI.Initialize(character);
+//     if (GameController.Instance != null && GameController.Instance.player != null)
+//     {
+//         foreach (Character enemies in GameController.Instance.enemy.enemies)
+//         {
+//             Debug.Log($"Enemy Name: {enemies.characterName}");
+//             Debug.Log($"Enemy Health: {enemies.health}");
+//             Debug.Log($"Enemy Level: {enemies.level}");
+//             enemyUI.Initialize(character);
 
-        }
-    }
-    else
-    {
-        Debug.LogError("GameController or Player is null!");
-    }
-}
-
-
+//         }
+//     }
+//     else
+//     {
+//         Debug.LogError("GameController or Player is null!");
+//     }
 }

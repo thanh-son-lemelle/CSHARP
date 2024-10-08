@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public CharacterUI characterUI; // Reference to the Player system;
     public CharacterUIManager  characterUIManager; 
     public EnemyUIManager  enemyUIManager; 
-    public Enemy enemy; 
+    // public Enemy enemy; 
 
     private void Awake()
     {
@@ -30,8 +30,8 @@ public class GameController : MonoBehaviour
         InitializePlayer();
 
         // Initialize Enemy
-        InitializeEnemy();
-        enemyUIManager.DisplayEnemies();
+        // InitializeEnemy();
+        // enemyUIManager.DisplayEnemies();
 
 
 
@@ -89,17 +89,17 @@ public class GameController : MonoBehaviour
         Debug.Log("Player initialized with characters: " + player.characters.Count);
    }
 
-    public void InitializeEnemy()
-    {
-        enemy = new Enemy();       
-        // Add characters to the player's character list
-        enemy.enemies.Add(new Character("Enemy1", 10, 60, 10, 5, 7, 1, 0, 100, 1));
-        enemy.enemies.Add(new Character("Enemy2", 20, 40, 8, 4, 6, 1, 0, 100, 2));    
+//     public void InitializeEnemy()
+//     {
+//         enemy = new Enemy();       
+//         // Add characters to the player's character list
+//         enemy.enemies.Add(new Character("Enemy1", 10, 60, 10, 5, 7, 1, 0, 100, 1));
+//         enemy.enemies.Add(new Character("Enemy2", 20, 40, 8, 4, 6, 1, 0, 100, 2));    
 
-        // Debug
-        Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
+//         // Debug
+//         Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
 
-   }
+//    }
 }
 
 

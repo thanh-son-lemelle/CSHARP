@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Character
 {
@@ -94,10 +92,8 @@ public class Character
     //     Debug.Log($"{characterName} moved to {coordinates}");
     // }
 
-    // You can add Update logic here if needed
     private void Update()
     {
-        // Example: check for level up condition or other updates
     }
 
 

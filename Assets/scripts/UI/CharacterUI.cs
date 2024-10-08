@@ -1,29 +1,19 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using System.ComponentModel;
 using TMPro;
-using System.Runtime.CompilerServices;
 
 public class CharacterUI : MonoBehaviour
 {
 
     // UI image to display character
     public Image characterSprite;
-    public Sprite character1;
-    public Sprite character2;
-    public Sprite character3;
-    public Sprite character4;
-
-    public Image characterImage;
     public TextMeshProUGUI characterNameText;
     public Slider healthBar;
     public TextMeshProUGUI levelText;
     public Slider experienceBar;
     public Button attackButton;
+    [SerializeField] public Sprite[] playerSprites; // Array for character sprites
     private Character character;
-
     public Button characterButton;
     [HideInInspector] public GameObject characterMainPanel;
 
@@ -62,52 +52,34 @@ public class CharacterUI : MonoBehaviour
 
         Debug.Log("Updating sprite for characterID: " + characterID);
 
+        characterSprite.sprite = playerSprites[characterID - 1];
+
         // Use a switch to select the sprite based on the character's ID
-        switch (characterID)
-        {
-            case 1:
-                characterSprite.sprite = character1;
-                Debug.Log("Displaying sprite for Hero1");
-                break;
-            case 2:
-                characterSprite.sprite = character2;
-                Debug.Log("Displaying sprite for Hero2");
-                break;
-            case 3:
-                characterSprite.sprite = character3;
-                Debug.Log("Displaying sprite for Hero3");
-                break;
-            case 4:
-                characterSprite.sprite = character4;
-                characterSprite.SetNativeSize();
-                Debug.Log("Displaying sprite for Hero4");
-                break;
-            default:
-                Debug.LogError("Unrecognized character ID: " + characterID);
-                break;
-        }
+        // switch (characterID)
+        // {
+        //     case 1:
+        //         characterSprite.sprite = playerSprites[characterID - 1];
+        //         Debug.Log("Displaying sprite for Hero1");
+        //         break;
+        //     case 2:
+        //         characterSprite.sprite = playerSprites[characterID - 1];
+        //         Debug.Log("Displaying sprite for Hero2");
+        //         break;
+        //     case 3:
+        //         // characterSprite.sprite = character3;
+        //         Debug.Log("Displaying sprite for Hero3");
+        //         break;
+        //     case 4:
+        //         // characterSprite.sprite = character4;
+        //         characterSprite.SetNativeSize();
+        //         Debug.Log("Displaying sprite for Hero4");
+        //         break;
+        //     default:
+        //         Debug.LogError("Unrecognized character ID: " + characterID);
+        //         break;
+        // }
         rect.sizeDelta = new Vector2
-        (60, 60);
-    }
-
-    // Method called when the attack button is clicked
-    private void OnAttackButtonClicked()
-    {
-        // Attack another character or perform an action
-        // Example: Simulate an attack on another character (to be defined)
-        Character target = FindTargetCharacter(); // Implement this
-        if (target != null)
-        {
-            character.AttackTarget(target); // Call the attack method
-            // UpdateCharacterUI(); // Update UI after the attack
-        }
-    }
-
-    // Method to simulate finding a target character (implement according to your game's logic)
-    private Character FindTargetCharacter()
-    {
-
-        return null;
+        (160, 100);
     }
 
     private void Update()
@@ -133,8 +105,7 @@ public class CharacterUI : MonoBehaviour
 
     private void OnCharacterButtonClicked()
     {
-        GameController.Instance.player.SetActiveCharacter(character.characterID);
-        GameController.Instance.player.SetActiveCharacter(character.characterID);
+        PlayerController.Instance.player.SetActiveCharacter(character.characterID);
         characterMainPanel.SetActive(false);
     }
 

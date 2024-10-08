@@ -39,13 +39,12 @@ public class MoveWorld : MonoBehaviour
         if (isMoving)
         {
             characterAnimator.SetBool("IsMoving", true); // Assuming you have a parameter called IsMoving in your Animator
-            Debug.Log("moving" + isMoving);
+            // Debug.Log("moving" + isMoving);
         }
         else
         {
             characterAnimator.SetBool("IsMoving", false); // Switch to idle animation
-            Debug.Log("moving" + isMoving);
-
+            // Debug.Log("moving" + isMoving);
         }
     }
 }

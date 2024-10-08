@@ -77,11 +77,11 @@ public class GameController : MonoBehaviour
     {
         enemy = new Enemy();
         // Add characters to the player's character list
-        enemy.enemies.Add(new Character("Enemy1", 10, 60, 10, 5, 7, 1, 0, 100, 1));
-        enemy.enemies.Add(new Character("Enemy2", 20, 40, 8, 4, 6, 1, 0, 100, 2));
+        Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
+        enemyUIManager.DisplayEnemies();
+
 
         // Debug
-        Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
 
     }
 }

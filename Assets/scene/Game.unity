@@ -1044,6 +1044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 510562760}
+  - component: {fileID: 510562761}
   m_Layer: 0
   m_Name: EnemySection
   m_TagString: Untagged
@@ -1071,6 +1072,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510562761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510562759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5591afbe2c07cf7449598a06ed0320e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyUI: {fileID: 541967851}
 --- !u!1 &541967846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1097,7 @@ GameObject:
   - component: {fileID: 541967849}
   - component: {fileID: 541967848}
   - component: {fileID: 541967850}
+  - component: {fileID: 541967851}
   m_Layer: 0
   m_Name: ImgEnemeyLogo
   m_TagString: Untagged
@@ -1193,6 +1208,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &541967851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541967846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3486685f9b3817409265f83bbffae69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyUIManager: {fileID: 510562761}
 --- !u!1 &563411553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeImage: {fileID: 1246300724}
-  characterSprites:
+  playerSprites:
   - {fileID: 21300000, guid: 465ea5c2340d83b4db430ce7ea672135, type: 3}
   - {fileID: 21300000, guid: 2dd0b725edaeb7f41842a1ec9e0fcf61, type: 3}
   - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
@@ -2318,6 +2346,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 2010691725}
   characterUI: {fileID: 1134000233}
   characterUIManager: {fileID: 666152417}
+  enemyUIManager: {fileID: 510562761}
 --- !u!4 &1062573307
 Transform:
   m_ObjectHideFlags: 0
@@ -4534,6 +4563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4295246254396839358, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4298691344543918885, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4542,6 +4575,10 @@ PrefabInstance:
       propertyPath: characterMainPanel
       value: 
       objectReference: {fileID: 204605006}
+    - target: {fileID: 7192847545766305160, guid: 547515ff53ac6814ba15365400717d2e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

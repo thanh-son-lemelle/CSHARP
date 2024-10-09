@@ -12,12 +12,12 @@ public class EnemyUIManager : MonoBehaviour{
     // public Sprite Enemy3;
     // public Sprite Enemy4;
 
-    public EnemyUI enemyUI; 
+    public EnemyUI enemyUI;
     // public Character character;
 
 
     public void DisplayEnemies()
-{
+    {
     Debug.Log(">DISPLAY ENEMY");
     
 
@@ -36,4 +36,5 @@ public class EnemyUIManager : MonoBehaviour{
 //     {
 //         Debug.LogError("GameController or Player is null!");
 //     }
+    }
 }

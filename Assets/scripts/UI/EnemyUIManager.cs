@@ -16,9 +16,9 @@ public class EnemyUIManager : MonoBehaviour{
     // public Character character;
 
 
-//     public void DisplayEnemies()
-// {
-//     Debug.Log(">DISPLAY ENEMY");
+    public void DisplayEnemies()
+{
+    Debug.Log(">DISPLAY ENEMY");
     
 
 //     if (GameController.Instance != null && GameController.Instance.player != null)

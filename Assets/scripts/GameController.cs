@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
               // ! Save Time and Date
         saveGame.SaveTimeDate(); 
         saveGame.LoadData(); 
+        saveGame.DeleteDataByIndex(0);
 
    
     }

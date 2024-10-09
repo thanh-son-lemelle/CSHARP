@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 [System.Serializable] 
 public class GameData {
@@ -11,13 +12,13 @@ public class GameData {
 
 [System.Serializable]
 public class GameDataList { 
-    public List<GameData> gameDataList = new List<GameData>();
+    public List<GameData> gameDataList = new List<GameData>();    
 }
 
 public class SaveGame : MonoBehaviour
 {
     private string fileJsonPath; // Path for the Json file
-    private GameDataList gameDataList = new GameDataList(); // Instance to store data
+    public GameDataList gameDataList = new GameDataList(); // Instance to store data
 
     private void Start() {
 
@@ -48,9 +49,7 @@ public class SaveGame : MonoBehaviour
             gameDataList = JsonUtility.FromJson<GameDataList>(json);
             Debug.Log("Data loaded from " + fileJsonPath);
 
-            // Display data from the gameDataList
-            GetDataByIndex(2); // only Data from Index 2
-            DisplayTerminalData(); // All data
+           
             
         }
         else
@@ -58,6 +57,7 @@ public class SaveGame : MonoBehaviour
             Debug.Log("! File not found: " + fileJsonPath);
         }   
     }
+
 
     // Display all Data from the list gameDataList
     public void DisplayTerminalData () {
@@ -69,6 +69,34 @@ public class SaveGame : MonoBehaviour
             }                 
     }
 
+    // Method to delete data by index
+   public void DeleteDataByIndex(int index) {
+
+    if (index >= 0 && index < gameDataList.gameDataList.Count) {
+
+        // Remove the element at the specified index
+        gameDataList.gameDataList.RemoveAt(index);
+        Debug.Log($"Data at index {index} deleted.");
+
+        // Convert the updated list to JSON
+        string json = JsonUtility.ToJson(gameDataList, true);
+
+        // Check if the JSON string is correctly generated
+        Debug.Log("Updated JSON Data: " + json);
+
+        // Write the updated JSON string to the file
+        try {
+            File.WriteAllText(fileJsonPath, json);  // Overwrite the JSON file with the updated list
+            Debug.Log("File successfully updated at " + fileJsonPath);
+        } catch (Exception e) {
+            Debug.LogError("Error writing to file: " + e.Message);
+        }
+    } else {
+        Debug.Log($"Invalid index: {index}. Cannot delete data.");
+    }
+}
+
+
     // Display data according to an index
     public void GetDataByIndex(int index) {
         if (index >= 0 && index < gameDataList.gameDataList.Count) {
@@ -77,19 +105,31 @@ public class SaveGame : MonoBehaviour
         } else {
             Debug.Log($"Invalid index: {index}. Please enter a value between 0 and {gameDataList.gameDataList.Count - 1}.");
         }
+
+
     }
 
     // Method to save the time and date
     public void SaveTimeDate() {
+     
 
         GameData timeData = new GameData
         {
-            time = DateTime.Now.ToString("HH:mm:ss"),
+            time = DateTime.Now.ToString("HH:mm"),
             date = DateTime.Now.ToString("yyyy-MM-dd")
         };
 
-        // Add the new data to the list
+      
+        // If gameDataList has more than 4 entries exit 
+        if (gameDataList.gameDataList.Count >= 4) {
+            Debug.Log("The list is full. Cannot save more than 4 entries.");
+            return; 
+        }
+
+        // If less than 4 entries, save the data
+        else {
         gameDataList.gameDataList.Add(timeData);
+        }
 
 
         // Convert the list to JSON

@@ -9,7 +9,7 @@ public class NewGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Button playButton;
     private Animator animator;
     public string isHover = "isHover"; // Make sure this matches the Animator parameter name
-    public int CharacterChosed {set;get;}
+    public int CharacterChosed { set; get; }
 
     private void Start()
     {
@@ -29,23 +29,26 @@ public class NewGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void ChooseCharacter()
     {
-        switch (CharacterChosed)
+        if (CharacterChosed > 0)
         {
-            case 1:
-                PlayerController.Instance.player.characters.Add(new Character("Hero1", 70, 100, 10, 5, 7, 1, 0, 100, 1));
-                break;
-            case 2:
-                PlayerController.Instance.player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));
-                break;
-            case 3:
-                PlayerController.Instance.player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 3));
-                break;
-            case 4:
-                PlayerController.Instance.player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 4));
-                break;
+            switch (CharacterChosed)
+            {
+                case 1:
+                    PlayerController.Instance.player.characters.Add(new Character("Hero1", 70, 100, 10, 5, 7, 1, 0, 100, 1));
+                    break;
+                case 2:
+                    PlayerController.Instance.player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));
+                    break;
+                case 3:
+                    PlayerController.Instance.player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 3));
+                    break;
+                case 4:
+                    PlayerController.Instance.player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 4));
+                    break;
+            }
+        PlayerController.Instance.player.SetActiveCharacter(CharacterChosed);
+        Debug.Log("Player initialized with character number: " + CharacterChosed);
         }
-        Debug.Log("Player initialized with character number: " + CharacterNumber);
-        PlayerController.Instance.player.SetActiveCharacter(CharacterNumber);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

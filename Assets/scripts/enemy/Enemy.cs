@@ -3,9 +3,7 @@ using System.Collections.Generic;
 
 public class Enemy
 {
-
     public List<Character> enemies { get; set; }
-
     public Enemy()
     {
         enemies = new List<Character>
@@ -14,6 +12,4 @@ public class Enemy
             new("Enemy2", 20, 40, 8, 4, 6, 1, 0, 100, 2)
         };
     }
-
-
 }

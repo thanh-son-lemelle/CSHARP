@@ -894,7 +894,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 440398520}
         m_TargetAssemblyTypeName: SaveGame, Assembly-CSharp
-        m_MethodName: SaveTimeDate
+        m_MethodName: SaveAllGameInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -928,6 +928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13724bd39e4f374f8567d716e748c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDataList:
+    gameDataList: []
+  gameController: {fileID: 1062573306}
 --- !u!1 &476378671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,6 +3388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a09988d205b3a489bb7d19f752b2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemList: []
 --- !u!4 &1549701210
 Transform:
   m_ObjectHideFlags: 0
@@ -4665,6 +4669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13724bd39e4f374f8567d716e748c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDataList:
+    gameDataList: []
+  gameController: {fileID: 0}
 --- !u!1001 &1986039662151617936
 PrefabInstance:
   m_ObjectHideFlags: 0

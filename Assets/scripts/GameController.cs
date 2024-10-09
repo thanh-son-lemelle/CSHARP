@@ -49,9 +49,8 @@ public class GameController : MonoBehaviour
         // characterUI.UpdateCharacterSprite(4);
 
               // ! Save Time and Date
-        saveGame.SaveTimeDate(); 
-        saveGame.LoadData(); 
-        saveGame.DeleteDataByIndex(0);
+        // saveGame.LoadData(); 
+        // saveGame.DeleteDataByIndex(0);
 
    
     }

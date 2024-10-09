@@ -8,6 +8,7 @@ public enum ItemType
     MagicScroll
 }
 
+[System.Serializable]
 public class Item
 {
     public string Name { get; set; }

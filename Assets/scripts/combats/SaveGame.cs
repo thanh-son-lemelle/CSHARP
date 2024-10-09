@@ -7,18 +7,28 @@ using Unity.VisualScripting;
 [System.Serializable] 
 public class GameData {
     public string time; 
-    public string date;    
+    public string date;  
+    public List <Item> SavedInventory;  
+    public List <Character> SavedPlayer;  
+    // public List <Character> Savedenemy;  
+
+
 }
 
 [System.Serializable]
 public class GameDataList { 
     public List<GameData> gameDataList = new List<GameData>();    
+
 }
+
+
 
 public class SaveGame : MonoBehaviour
 {
     private string fileJsonPath; // Path for the Json file
+
     public GameDataList gameDataList = new GameDataList(); // Instance to store data
+
 
     private void Start() {
 
@@ -109,27 +119,36 @@ public class SaveGame : MonoBehaviour
 
     }
 
-    // Method to save the time and date
-    public void SaveTimeDate() {
-     
 
-        GameData timeData = new GameData
+
+    public void SaveAllGameInfo(){
+
+        // Instance to store data
+        GameData gameData = new()
         {
-            time = DateTime.Now.ToString("HH:mm"),
-            date = DateTime.Now.ToString("yyyy-MM-dd")
+
+        // Time and Date
+        time = DateTime.Now.ToString("HH:mm"),
+        date = DateTime.Now.ToString("yyyy-MM-dd"),
+        
+        // Inventory
+        SavedInventory = GameController.Instance.inventory.itemList,
+
+        // Players
+        SavedPlayer = PlayerController.Instance.player.characters, 
+
+        // Enemies
+        // Savedenemy = PlayerController.Instance.player.characters,             
         };
 
-      
-        // If gameDataList has more than 4 entries exit 
+        // If gameDataList has more than 4 entries, exit 
         if (gameDataList.gameDataList.Count >= 4) {
             Debug.Log("The list is full. Cannot save more than 4 entries.");
             return; 
         }
 
-        // If less than 4 entries, save the data
-        else {
-        gameDataList.gameDataList.Add(timeData);
-        }
+            // If less than 4 entries, save the data
+        gameDataList.gameDataList.Add(gameData);
 
 
         // Convert the list to JSON
@@ -137,9 +156,9 @@ public class SaveGame : MonoBehaviour
 
         // Write the JSON string to the file
         File.WriteAllText(fileJsonPath, json);
-
-        Debug.Log("Data saved to " + fileJsonPath);    
-
-        // Allow only 4 elements to be savec   
+        Debug.Log("> Save All Data Game Info to :  " + fileJsonPath);          
+    
     }
+
+
 }

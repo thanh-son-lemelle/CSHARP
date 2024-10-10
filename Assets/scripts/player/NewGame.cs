@@ -35,19 +35,19 @@ public class NewGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             switch (CharacterChosed)
             {
                 case 1:
-                    PlayerController.Instance.player.characters.Add(new Character("Hero1", 70, 100, 10, 5, 7, 1, 0, 100, 1));
-                    PlayerController.Instance.player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));
-                    PlayerController.Instance.player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 3));
-                    PlayerController.Instance.player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 4));
+                    PlayerController.Instance.player.characters.Add(new Character("Aliciadyr", 70, 100, 10, 5, 7, 1, 0, 100, 1));
+                    PlayerController.Instance.player.characters.Add(new Character("Eryndor", 80, 50, 8, 4, 6, 1, 0, 100, 2));
+                    PlayerController.Instance.player.characters.Add(new Character("Elowen", 50, 50, 8, 4, 6, 1, 0, 100, 3));
+                    PlayerController.Instance.player.characters.Add(new Character("Lyria", 40, 50, 8, 4, 6, 1, 0, 100, 4));
                     break;
                 case 2:
-                    PlayerController.Instance.player.characters.Add(new Character("Hero2", 80, 50, 8, 4, 6, 1, 0, 100, 2));
+                    PlayerController.Instance.player.characters.Add(new Character("Eryndor", 80, 50, 8, 4, 6, 1, 0, 100, 2));
                     break;
                 case 3:
-                    PlayerController.Instance.player.characters.Add(new Character("Hero3", 50, 50, 8, 4, 6, 1, 0, 100, 3));
+                    PlayerController.Instance.player.characters.Add(new Character("Elowen", 50, 50, 8, 4, 6, 1, 0, 100, 3));
                     break;
                 case 4:
-                    PlayerController.Instance.player.characters.Add(new Character("Hero4", 40, 50, 8, 4, 6, 1, 0, 100, 4));
+                    PlayerController.Instance.player.characters.Add(new Character("Lyria", 40, 50, 8, 4, 6, 1, 0, 100, 4));
                     break;
             }
             PlayerController.Instance.player.SetActiveCharacter(CharacterChosed);

@@ -654,10 +654,10 @@ MonoBehaviour:
   experienceBar: {fileID: 3491144369432233566}
   attackButton: {fileID: 0}
   playerSprites:
-  - {fileID: 21300000, guid: 465ea5c2340d83b4db430ce7ea672135, type: 3}
-  - {fileID: 21300000, guid: 2dd0b725edaeb7f41842a1ec9e0fcf61, type: 3}
-  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
-  - {fileID: 21300000, guid: f53fd09f6c46f914aa2fc9d86930d2cf, type: 3}
+  - {fileID: 21300000, guid: 9aa9db598f8e65a41855b6c52738c49a, type: 3}
+  - {fileID: 21300000, guid: 4cfe43575092dd84994b46fff9a2d53c, type: 3}
+  - {fileID: 21300000, guid: b5693f02ac5771149982ea33d4e05365, type: 3}
+  - {fileID: 21300000, guid: 23b3b74d964833441a8da1fbefe4a361, type: 3}
   characterButton: {fileID: 3483809062507475497}
   characterMainPanel: {fileID: 0}
 --- !u!1 &4396116463988201496

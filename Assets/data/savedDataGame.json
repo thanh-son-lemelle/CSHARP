@@ -1,161 +1,361 @@
 {
     "gameDataList": [
         {
-            "time": "11:31",
-            "date": "2024-10-09",
-            "SavedInventory": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            ],
-            "SavedPlayer": [
-                {
-                    "characterName": "Hero3",
-                    "health": 50,
-                    "maxHealth": 50,
-                    "attack": 8,
-                    "defense": 4,
-                    "speed": 6,
-                    "level": 1,
-                    "experience": 0,
-                    "experienceToNextLevel": 100,
-                    "characterID": 3,
-                    "coordinates": {
-                        "x": 0,
-                        "y": 0
-                    }
-                }
-            ]
-        },
-        {
-            "time": "11:32",
-            "date": "2024-10-09",
-            "SavedInventory": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            ],
-            "SavedPlayer": [
-                {
-                    "characterName": "Hero3",
-                    "health": 50,
-                    "maxHealth": 50,
-                    "attack": 8,
-                    "defense": 4,
-                    "speed": 6,
-                    "level": 1,
-                    "experience": 0,
-                    "experienceToNextLevel": 100,
-                    "characterID": 3,
-                    "coordinates": {
-                        "x": 0,
-                        "y": 0
-                    }
-                }
-            ]
-        },
-        {
-            "time": "11:41",
-            "date": "2024-10-09",
-            "SavedInventory": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            ],
-            "SavedPlayer": [
-                {
-                    "characterName": "Hero3",
-                    "health": 50,
-                    "maxHealth": 50,
-                    "attack": 8,
-                    "defense": 4,
-                    "speed": 6,
-                    "level": 1,
-                    "experience": 0,
-                    "experienceToNextLevel": 100,
-                    "characterID": 3,
-                    "coordinates": {
-                        "x": 0,
-                        "y": 0
-                    }
-                }
-            ]
-        },
-        {
-            "time": "12:49",
+            "time": "13:22",
             "date": "2024-10-10",
             "SavedInventory": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
+                {
+                    "Name": "Health Potion",
+                    "Effect": "Restores 50 HP",
+                    "Type": 0,
+                    "Quantity": 1,
+                    "SlotIndex": 0
+                },
+                {
+                    "Name": "Sword",
+                    "Effect": "A sharp blade",
+                    "Type": 1,
+                    "Quantity": 1,
+                    "SlotIndex": 1
+                },
+                {
+                    "Name": "Key",
+                    "Effect": "Unlocks doors",
+                    "Type": 2,
+                    "Quantity": 1,
+                    "SlotIndex": 2
+                },
+                {
+                    "Name": "Magic Scroll",
+                    "Effect": "Contains powerful spells",
+                    "Type": 3,
+                    "Quantity": 2,
+                    "SlotIndex": 3
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 4
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 5
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 6
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 7
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 8
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 9
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 10
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 11
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 12
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 13
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 14
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 15
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 16
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 17
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 18
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 19
+                }
+            ],
+            "SavedPlayer": [
+                {
+                    "characterName": "Hero1",
+                    "health": 70,
+                    "maxHealth": 100,
+                    "attack": 10,
+                    "defense": 5,
+                    "speed": 7,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 1,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "characterName": "Hero2",
+                    "health": 80,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 2,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "characterName": "Hero3",
+                    "health": 50,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 3,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "characterName": "Hero4",
+                    "health": 40,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 4,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        },
+        {
+            "time": "13:27",
+            "date": "2024-10-10",
+            "SavedInventory": [
+                {
+                    "Name": "Health Potion",
+                    "Effect": "Restores 50 HP",
+                    "Type": 0,
+                    "Quantity": 1,
+                    "SlotIndex": 0
+                },
+                {
+                    "Name": "Sword",
+                    "Effect": "A sharp blade",
+                    "Type": 1,
+                    "Quantity": 1,
+                    "SlotIndex": 1
+                },
+                {
+                    "Name": "Key",
+                    "Effect": "Unlocks doors",
+                    "Type": 2,
+                    "Quantity": 1,
+                    "SlotIndex": 2
+                },
+                {
+                    "Name": "Magic Scroll",
+                    "Effect": "Contains powerful spells",
+                    "Type": 3,
+                    "Quantity": 2,
+                    "SlotIndex": 3
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 4
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 5
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 6
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 7
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 8
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 9
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 10
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 11
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 12
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 13
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 14
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 15
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 16
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 17
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 18
+                },
+                {
+                    "Name": "",
+                    "Effect": "",
+                    "Type": 0,
+                    "Quantity": 0,
+                    "SlotIndex": 19
+                }
             ],
             "SavedPlayer": [
                 {

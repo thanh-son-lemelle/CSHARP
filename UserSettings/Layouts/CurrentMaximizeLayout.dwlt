@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 7832
+  controlID: 12346
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -105,18 +105,18 @@ MonoBehaviour:
       y: 21
       width: 1098
       height: 547
-    m_Scale: {x: 2.3185477, y: 2.3185477}
-    m_Translation: {x: 550.95605, y: 339.71814}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 549, y: 273.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -237.6298
-      y: -146.52196
-      width: 473.5723
-      height: 235.92354
+      x: -549
+      y: -273.5
+      width: 1098
+      height: 547
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1098, y: 568}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 7720
+  controlID: 12258
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -170,8 +170,8 @@ MonoBehaviour:
     y: 0
     width: 448
     height: 626
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -216,21 +216,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1a87ffff1adbffff5adbffff7adbffffbcdbffff80e8ffff8ce8ffff9ae8ffff3aebffffdcebffff248200009c8200002c840000
+      m_ExpandedIDs: 6a5afeff1a87ffff1adbffff5adbffff7adbffffbcdbffff80e8ffff8ce8ffff9ae8ffff3aebffffdcebffff248200009c8200002c840000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: ImageQuit
-        m_OriginalName: ImageQuit
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -5376
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 7787
+  controlID: 12302
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -1014,9 +1014,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 928.9145, y: 501.43744, z: -0.24005225}
+    m_Target: {x: -4.1866436, y: -2.624734, z: 0.3555443}
     speed: 2
-    m_Value: {x: 928.9145, y: 501.43744, z: -0.24005225}
+    m_Value: {x: -4.1866436, y: -2.624734, z: 0.3555443}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1066,9 +1066,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 62.545776
+    m_Target: 2.9856431
     speed: 2
-    m_Value: 62.545776
+    m_Value: 2.9856431
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1112,8 +1112,8 @@ MonoBehaviour:
     y: 589
     width: 1100
     height: 350
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1234,8 +1234,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9c7a0000
-    m_LastClickedInstanceID: 31388
+    m_SelectedInstanceIDs: 9e7a0000
+    m_LastClickedInstanceID: 31390
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e63000086860000760e0100ea630000cc20020010190200000000008c980000
     m_RenameOverlay:
@@ -1331,7 +1331,7 @@ MonoBehaviour:
     m_CachedPref: 370
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 31388
+  m_LastInspectedObjectInstanceID: 31390
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

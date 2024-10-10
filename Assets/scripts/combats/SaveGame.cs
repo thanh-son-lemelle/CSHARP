@@ -123,6 +123,10 @@ public class SaveGame : MonoBehaviour
 
     public void SaveAllGameInfo(){
 
+        Debug.Log(" Length of inventory : " + GameController.Instance.inventory.itemList.Count);
+        foreach(Item item in GameController.Instance.inventory.itemList){
+            Debug.Log("Name : " + item.Name + " Type  : " + item.Type); 
+        }
         // Instance to store data
         GameData gameData = new()
         {

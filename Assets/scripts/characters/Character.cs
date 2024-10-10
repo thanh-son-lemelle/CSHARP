@@ -1,20 +1,20 @@
 using UnityEngine;
-
+[System.Serializable]
 public class Character
 {
-    [SerializeField] public string characterName;
-    [SerializeField] public int health, maxHealth, attack, defense, speed, level, experience, experienceToNextLevel, characterID;
+    public string characterName;
+    public int health, maxHealth, strength, defense, speed, agility, intellect, level, experience, experienceToNextLevel, characterID;
 
 
     public Coordinates coordinates;
 
     //Constructors
-    public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
+    public Character(string characterName, int health, int maxHealth, int strength, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
         this.characterName = characterName;
         this.health = health;
         this.maxHealth = maxHealth;
-        this.attack = attack;
+        this.strength = strength;
         this.defense = defense;
         this.speed = speed;
         this.level = level;
@@ -28,12 +28,12 @@ public class Character
 
 
     // Instead of a constructor, use this Initialize method to set character properties
-    public void Initialize(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
+    public void Initialize(string characterName, int health, int maxHealth, int strength, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
         this.characterName = characterName;
         this.health = health;
         this.maxHealth = maxHealth;
-        this.attack = attack;
+        this.strength = strength;
         this.defense = defense;
         this.speed = speed;
         this.level = level;
@@ -53,12 +53,12 @@ public class Character
         }
     }
 
-    // Function to attack another character
-    public void AttackTarget(Character target)
+    // Function to strength another character
+    public void strengthTarget(Character target)
     {
-        int damage = Mathf.Max(0, attack - target.defense); // Simplified damage calculation
+        int damage = Mathf.Max(0, strength - target.defense); // Simplified damage calculation
         target.TakeDamage(damage);
-        Debug.Log($"{characterName} attacks {target.characterName} for {damage} damage!");
+        Debug.Log($"{characterName} strengths {target.characterName} for {damage} damage!");
     }
 
     // Function to gain experience and level up
@@ -79,7 +79,7 @@ public class Character
         experienceToNextLevel *= 2;
         maxHealth += 10;
         health = maxHealth;
-        attack += 2;
+        strength += 2;
         defense += 2;
         speed += 2;
         Debug.Log($"{characterName} leveled up! Now at level {level}.");

@@ -10,18 +10,13 @@ public class GameData {
     public string date;  
     public List <Item> SavedInventory;  
     public List <Character> SavedPlayer;  
-    // public List <Character> Savedenemy;  
-
-
+    // public List <Character> Savedenemy; 
 }
 
 [System.Serializable]
 public class GameDataList { 
     public List<GameData> gameDataList = new List<GameData>();    
-
 }
-
-
 
 public class SaveGame : MonoBehaviour
 {
@@ -57,17 +52,13 @@ public class SaveGame : MonoBehaviour
             
             // Convert the JSON string to a GameDataList object
             gameDataList = JsonUtility.FromJson<GameDataList>(json);
-            Debug.Log("Data loaded from " + fileJsonPath);
-
-           
-            
+            Debug.Log("Data loaded from " + fileJsonPath);         
         }
         else
         {
             Debug.Log("! File not found: " + fileJsonPath);
         }   
     }
-
 
     // Display all Data from the list gameDataList
     public void DisplayTerminalData () {
@@ -106,7 +97,6 @@ public class SaveGame : MonoBehaviour
     }
 }
 
-
     // Display data according to an index
     public void GetDataByIndex(int index) {
         if (index >= 0 && index < gameDataList.gameDataList.Count) {
@@ -115,8 +105,6 @@ public class SaveGame : MonoBehaviour
         } else {
             Debug.Log($"Invalid index: {index}. Please enter a value between 0 and {gameDataList.gameDataList.Count - 1}.");
         }
-
-
     }
 
 
@@ -135,7 +123,7 @@ public class SaveGame : MonoBehaviour
         SavedInventory = GameController.Instance.inventory.itemList,
 
         // Players
-        SavedPlayer = PlayerController.Instance.player.characters, 
+        SavedPlayer = PlayerController.Instance.player.characters
 
         // Enemies
         // Savedenemy = PlayerController.Instance.player.characters,             

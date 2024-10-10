@@ -50,9 +50,7 @@ public class GameController : MonoBehaviour
 
               // ! Save Time and Date
         // saveGame.LoadData(); 
-        // saveGame.DeleteDataByIndex(0);
-
-   
+        // saveGame.DeleteDataByIndex(0);   
     }
 
     // Method to add some test items to the inventory
@@ -76,6 +74,7 @@ public class GameController : MonoBehaviour
         if (inventoryUI != null && inventory != null)
         {
             inventoryUI.UpdateUI(inventory.itemList);
+ 
         }
         else
         {

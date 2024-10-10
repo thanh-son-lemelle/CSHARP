@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
         // Set the instance to this instance
         Instance = this;
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         // Initialize Enemy
         // InitializeEnemy();

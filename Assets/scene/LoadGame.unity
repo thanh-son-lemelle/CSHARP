@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 161741250}
   - component: {fileID: 161741249}
   m_Layer: 0
-  m_Name: TextTime
+  m_Name: TextTime1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,7 +1396,7 @@ RectTransform:
   - {fileID: 71887412}
   - {fileID: 494535701}
   - {fileID: 427466480}
-  m_Father: {fileID: 1971833191}
+  m_Father: {fileID: 2005741079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1951,7 +1951,7 @@ RectTransform:
   - {fileID: 1946000008}
   - {fileID: 807925699}
   - {fileID: 2108692165}
-  m_Father: {fileID: 1971833191}
+  m_Father: {fileID: 2005741079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 1395763382}
   - component: {fileID: 1395763381}
   m_Layer: 0
-  m_Name: TextDate
+  m_Name: TextDate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,11 +3310,11 @@ RectTransform:
   - {fileID: 767264197}
   - {fileID: 848103601}
   - {fileID: 1025208631}
-  m_Father: {fileID: 1971833191}
+  m_Father: {fileID: 2005741079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.997372, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 14.997372, y: -0}
   m_SizeDelta: {x: 408.98, y: 100.097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876404148
@@ -3388,7 +3388,7 @@ RectTransform:
   - {fileID: 576029365}
   - {fileID: 1395763380}
   - {fileID: 161741248}
-  m_Father: {fileID: 1971833191}
+  m_Father: {fileID: 2005741079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3697,13 +3697,10 @@ RectTransform:
   - {fileID: 1518506116}
   - {fileID: 1871603218}
   - {fileID: 1227927808}
-  - {fileID: 1886215036}
-  - {fileID: 1876404147}
-  - {fileID: 1080052169}
-  - {fileID: 821066708}
   - {fileID: 694398437}
   - {fileID: 82875054}
   - {fileID: 1269352040}
+  - {fileID: 2005741079}
   m_Father: {fileID: 1923489811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3786,6 +3783,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff12269475b92e44fa257c923a36c7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2005741078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005741079}
+  - component: {fileID: 2005741081}
+  - component: {fileID: 2005741080}
+  m_Layer: 0
+  m_Name: GameToSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2005741079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005741078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1886215036}
+  - {fileID: 1876404147}
+  - {fileID: 1080052169}
+  - {fileID: 821066708}
+  m_Father: {fileID: 1971833191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2005741080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005741078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be92386feff88b4ba61f8a8603f18f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfoGameDate:
+  - {fileID: 1395763381}
+  - {fileID: 848103602}
+  - {fileID: 807925700}
+  - {fileID: 494535702}
+  InfoGameTime:
+  - {fileID: 161741249}
+  - {fileID: 1025208632}
+  - {fileID: 2108692166}
+  - {fileID: 427466481}
+  saveGame: {fileID: 2005741081}
+--- !u!114 &2005741081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005741078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13724bd39e4f374f8567d716e748c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDataList:
+    gameDataList: []
 --- !u!1 &2108692164
 GameObject:
   m_ObjectHideFlags: 0

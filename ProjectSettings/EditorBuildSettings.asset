@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/NewGame.unity
     guid: 612c736a51ef5004da95a7b3c2c3158c
-  - enabled: 1
+  - enabled: 0
     path: Assets/scene/Game.unity
     guid: 3fa61d9defabc874c9f7af5fe66dc29d
   - enabled: 1

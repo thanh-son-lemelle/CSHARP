@@ -9,7 +9,6 @@ public class CharacterDisplay : MonoBehaviour
     [SerializeField] public Animator activeAnimator; // Animator for the character (shared)
     public Slider playerHealthBar; // Player healthbar
 
-
     void Start()
     {
         // Initialize the active sprite and animator controller
@@ -36,7 +35,7 @@ public class CharacterDisplay : MonoBehaviour
         activeAnimator.runtimeAnimatorController = animatorControllers[characterID - 1];
     }
 
-    public void UpdatePlayerHealthBar() {
+     public void UpdatePlayerHealthBar() {
 
         foreach (Character character in PlayerController.Instance.player.characters) {
 
@@ -52,6 +51,5 @@ public class CharacterDisplay : MonoBehaviour
         }
 
     }
-
 
 }

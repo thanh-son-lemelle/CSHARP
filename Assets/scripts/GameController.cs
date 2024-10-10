@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public CharacterUI characterUI; // Reference to the Player system;
     public CharacterUIManager characterUIManager;
     public EnemyUIManager enemyUIManager;
-    [HideInInspector] public Enemy enemy;
+    // [HideInInspector] public Enemy enemy;
     public SaveGame saveGame; 
 
     private void Awake()
@@ -27,10 +27,10 @@ public class GameController : MonoBehaviour
         // Set the instance to this instance
         Instance = this;
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         // Initialize Enemy
-        InitializeEnemy();
+        // InitializeEnemy();
         // enemyUIManager.DisplayEnemies();
 
   
@@ -83,17 +83,19 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void InitializeEnemy()
-    {
-        enemy = new Enemy();
-        // Add characters to the player's character list
-        Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
-        enemyUIManager.DisplayEnemies();
+//     public void InitializeEnemy()
+//     {
+//         enemy = new Enemy();
+//         // Add characters to the player's character list
+// //         enemy.enemies.Add(new Character("Enemy1", 10, 60, 10, 5, 7, 1, 0, 100, 1));
+// //         enemy.enemies.Add(new Character("Enemy2", 20, 40, 8, 4, 6, 1, 0, 100, 2)); 
+//         Debug.Log("Enemy initialized with characters: " + enemy.enemies.Count);
+//         // enemyUIManager.DisplayEnemies();
 
 
-        // Debug
+//         // Debug
 
-    }
+//     }
 }
 
 

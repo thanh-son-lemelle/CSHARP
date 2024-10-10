@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterUIManager : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class CharacterUIManager : MonoBehaviour
             characterUI.characterNameText.gameObject.SetActive(true);
             characterUI.healthBar.gameObject.SetActive(true);
             characterUI.levelText.gameObject.SetActive(true);
+
+           
+            
         }
     }
     else

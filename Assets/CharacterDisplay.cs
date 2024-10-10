@@ -8,6 +8,7 @@ public class CharacterDisplay : MonoBehaviour
     [SerializeField] public SpriteRenderer characterSpriteRenderer; // Reference to the sprite renderer
     [SerializeField] public CapsuleCollider2D characterCollider; // Reference to the CapsuleCollider2D
 
+    // public Slider playerHealthBar; // Player healthbar
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class CharacterDisplay : MonoBehaviour
     void Update()
     {
         UpdatePlayerDisplay(PlayerController.Instance.player.activeCharacterID);
+        // UpdatePlayerHealthBar();
+
     }
 
     public void UpdatePlayerDisplay(int characterID)
@@ -37,4 +40,22 @@ public class CharacterDisplay : MonoBehaviour
         }
 
     }
+
+    //  public void UpdatePlayerHealthBar() {
+
+    //     foreach (Character character in PlayerController.Instance.player.characters) {
+
+    //      if (character.characterID == PlayerController.Instance.player.activeCharacterID) {
+    //             playerHealthBar.maxValue = character.maxHealth;
+    //             playerHealthBar.value = character.health; 
+
+    //             Debug.Log (character.health); 
+    //             Debug.Log (character.maxHealth); 
+
+    //         }
+
+    //     }
+
+    // }
+
 }

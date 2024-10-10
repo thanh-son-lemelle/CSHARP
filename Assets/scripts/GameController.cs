@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public CharacterUIManager characterUIManager;
     public EnemyUIManager enemyUIManager;
     // [HideInInspector] public Enemy enemy;
+    public SaveGame saveGame; 
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
         // InitializeEnemy();
         // enemyUIManager.DisplayEnemies();
 
+  
 
 
     }
@@ -45,6 +47,12 @@ public class GameController : MonoBehaviour
         UpdateInventoryUI();
 
         // characterUI.UpdateCharacterSprite(4);
+
+              // ! Save Time and Date
+        // saveGame.LoadData(); 
+        // saveGame.DeleteDataByIndex(0);
+
+   
     }
 
     // Method to add some test items to the inventory

@@ -1,0 +1,136 @@
+{
+    "gameDataList": [
+        {
+            "time": "11:31",
+            "date": "2024-10-09",
+            "SavedInventory": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ],
+            "SavedPlayer": [
+                {
+                    "characterName": "Hero3",
+                    "health": 50,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 3,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        },
+        {
+            "time": "11:32",
+            "date": "2024-10-09",
+            "SavedInventory": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ],
+            "SavedPlayer": [
+                {
+                    "characterName": "Hero3",
+                    "health": 50,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 3,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        },
+        {
+            "time": "11:41",
+            "date": "2024-10-09",
+            "SavedInventory": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ],
+            "SavedPlayer": [
+                {
+                    "characterName": "Hero3",
+                    "health": 50,
+                    "maxHealth": 50,
+                    "attack": 8,
+                    "defense": 4,
+                    "speed": 6,
+                    "level": 1,
+                    "experience": 0,
+                    "experienceToNextLevel": 100,
+                    "characterID": 3,
+                    "coordinates": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

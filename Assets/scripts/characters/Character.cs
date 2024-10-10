@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 public class Character
 {
     [SerializeField] public string characterName;
@@ -9,6 +10,8 @@ public class Character
     public Coordinates coordinates;
 
     //Constructors
+
+
     public Character(string characterName, int health, int maxHealth, int attack, int defense, int speed, int level, int experience, int experienceToNextLevel, int characterID)
     {
         this.characterName = characterName;

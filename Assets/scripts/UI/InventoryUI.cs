@@ -17,19 +17,6 @@ public class InventoryUI : MonoBehaviour
     public void UpdateUI(List<Item> items)
     {
 
-         Debug.Log("Updating UI with the following items:");
-    foreach (var item in items)
-    {
-        if (item != null)
-        {
-            Debug.Log($"Item: {item.Name}, Type: {item.GetType()}");
-        }
-        else
-        {
-            Debug.Log("Empty slot");
-        }
-    }
-
         // Clear existing UI slots
         foreach (Transform child in inventoryPanel)
         {

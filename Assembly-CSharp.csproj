@@ -112,7 +112,6 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\entities\characters\animations\info.txt" />
     <None Include="Assets\Tileset\Dungeon Tale\Assets\Materials\INFO.txt" />
     <None Include="Assets\entities\enemies\prefabs\info.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
